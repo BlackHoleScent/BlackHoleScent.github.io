@@ -1,0 +1,251 @@
+/* Reset Dasar */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { 
+    font-family: 'Montserrat', sans-serif; 
+    background-color: #fafafa; /* Latar belakang abu sangat terang agar elegan */
+    color: #333;
+}
+
+/* Navbar Elegan dengan Logo Gambar */
+.navbar-premium {
+    background-color: #000; /* Diubah menjadi hitam murni pekat agar menyatu dengan background logo Anda */
+    padding: 10px 50px;
+    display: flex;
+    justify-content: center; /* Membuat logo persis di tengah */
+    align-items: center;
+    border-bottom: 2px solid #d4af37; /* Garis bawah emas */
+}
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.logo-img { 
+    height: 100px; /* Anda bisa mengubah angka ini jika logonya terasa terlalu besar/kecil */
+    width: auto;
+    object-fit: contain;
+}
+/* Container Utama */
+.container-premium { 
+    max-width: 1200px; 
+    margin: 40px auto; 
+    padding: 0 15px; 
+}
+
+/* Header Koleksi */
+.header-collection {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.header-collection h2 {
+    font-family: 'Playfair Display', serif;
+    color: #111;
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+.header-collection p {
+    font-size: 13px;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Grid Katalog */
+.produk-grid-premium { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    gap: 18px; 
+}
+
+/* Desain Kartu Produk */
+.kartu-premium { 
+    background: #fff; 
+    text-decoration: none; 
+    color: #333; 
+    border-radius: 8px; 
+    display: flex; 
+    flex-direction: column; 
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    overflow: hidden;
+    border: 1px solid #eaeaea;
+}
+.kartu-premium:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+    border-color: #d4af37; /* Menyala emas saat disorot */
+}
+
+/* Area Gambar (Berbentuk Persegi) */
+.gambar-container { 
+    position: relative; 
+    width: 100%; 
+    padding-top: 100%; 
+    overflow: hidden;
+    background-color: #f9f9f9;
+}
+.gambar-container img { 
+    position: absolute; 
+    top: 0; left: 0; 
+    width: 100%; height: 100%; 
+    object-fit: cover; 
+    transition: transform 0.6s ease;
+}
+.kartu-premium:hover .gambar-container img {
+    transform: scale(1.05); /* Efek zoom elegan pada gambar saat disorot */
+}
+
+/* Label Diskon (Hitam & Emas) */
+.diskon-badge { 
+    position: absolute; 
+    top: 12px; right: 12px; 
+    background-color: #111; 
+    color: #d4af37; 
+    padding: 5px 10px; 
+    font-size: 11px; 
+    font-weight: 600; 
+    border-radius: 4px;
+    letter-spacing: 1px;
+}
+
+/* Label Promo (Putih Minimalis) */
+.promo-xtra {
+    position: absolute;
+    bottom: 12px; left: 12px;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #111;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Area Teks & Informasi */
+.info-premium { 
+    padding: 16px; 
+    display: flex; 
+    flex-direction: column; 
+    flex-grow: 1; 
+}
+
+/* Judul Parfum */
+.judul-premium { 
+    font-size: 13px; 
+    line-height: 1.5; 
+    margin-bottom: 10px; 
+    display: -webkit-box; 
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    font-weight: 500;
+}
+
+/* Badge Autentik */
+.auth-badge { 
+    color: #111; 
+    background-color: #f0f0f0;
+    padding: 2px 6px; 
+    font-size: 9px; 
+    border-radius: 3px; 
+    font-weight: 600; 
+    margin-right: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Teks Keunggulan dengan Centang Emas */
+.garansi-badge { 
+    color: #888; 
+    font-size: 11px; 
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.garansi-badge::before {
+    content: "✓";
+    color: #d4af37;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/* Baris Harga dan Terjual */
+.harga-container { 
+    margin-top: auto; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+.harga-premium { 
+    color: #111; /* Harga warna hitam pekat yang tegas */
+    font-size: 16px; 
+    font-weight: 700;
+}
+.terjual-premium { 
+    font-size: 11px; 
+    color: #a0a0a0; 
+}
+
+/* --- DESAIN HALAMAN DETAIL PRODUK --- */
+.detail-container { 
+    display: flex; flex-wrap: wrap; gap: 40px; 
+    max-width: 1000px; margin: 40px auto; padding: 30px; 
+    background: #fff; border-radius: 12px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03); 
+    border: 1px solid #eaeaea; 
+}
+.detail-gambar { 
+    flex: 1; min-width: 300px; display: flex; 
+    align-items: center; justify-content: center; 
+    background: #f9f9f9; border-radius: 8px; padding: 20px; 
+}
+.detail-gambar img { 
+    width: 100%; max-width: 400px; border-radius: 8px; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+}
+.detail-info { 
+    flex: 1; min-width: 300px; display: flex; 
+    flex-direction: column; justify-content: center; 
+}
+.detail-info h1 { 
+    font-family: 'Playfair Display', serif; font-size: 2.2rem; 
+    margin-bottom: 10px; color: #111; 
+}
+.deskripsi-detail { color: #555; line-height: 1.6; margin-bottom: 20px; font-size: 14px; }
+.notes-parfum { 
+    background: #fafafa; padding: 15px; 
+    border-left: 4px solid #d4af37; margin-bottom: 25px; 
+    font-size: 13px; line-height: 1.8; color: #333;
+}
+.harga-tampil-detail { 
+    color: #111; font-weight: 700; font-size: 2rem; 
+    margin-bottom: 20px; font-family: 'Montserrat', sans-serif; 
+}
+.pilih-ukuran-detail { 
+    width: 100%; padding: 15px; margin-bottom: 20px; 
+    border-radius: 8px; border: 1px solid #ddd; 
+    font-family: 'Montserrat', sans-serif; font-size: 15px; 
+    background-color: #fff; cursor: pointer; outline: none; 
+}
+.pilih-ukuran-detail:focus { border-color: #d4af37; }
+.btn-beli-detail { 
+    display: flex; justify-content: center; align-items: center; gap: 10px; 
+    width: 100%; padding: 16px; background: linear-gradient(45deg, #111, #222); 
+    color: #d4af37; border: none; border-radius: 8px; 
+    font-size: 1.1rem; font-weight: 600; cursor: pointer; 
+    transition: all 0.3s; text-transform: uppercase; letter-spacing: 1px; 
+}
+.btn-beli-detail:hover { 
+    transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.15); 
+}
+.btn-back { 
+    display: inline-block; margin: 20px 0 0 20px; 
+    color: #777; text-decoration: none; font-size: 14px; 
+    font-weight: 600; transition: color 0.3s; 
+}
+.btn-back:hover { color: #d4af37; }
