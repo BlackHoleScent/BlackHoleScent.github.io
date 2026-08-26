@@ -1,5 +1,5 @@
 // MASUKKAN NOMOR WA ANDA DI SINI (Ganti 62 821-84819821 dengan nomor Anda)
-const nomorWhatsApp = "6282184819821";
+const nomorWhatsApp = "6285285655769";
 
 const dropdownUkuran = document.querySelector('.pilih-ukuran-detail');
 const teksHarga = document.querySelector('.harga-tampil-detail');
